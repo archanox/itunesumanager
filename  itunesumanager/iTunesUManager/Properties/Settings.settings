@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="iTunesUManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SiteDomain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">example.edu</Value>
+    </Setting>
+    <Setting Name="SharedSecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)">32CHARACTERSLONG</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
