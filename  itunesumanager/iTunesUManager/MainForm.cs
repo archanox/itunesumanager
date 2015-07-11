@@ -29,14 +29,14 @@ namespace iTunesUManager
 
 	
 
-		void MainForm_Load(object sender, System.EventArgs e)
+		void MainForm_Load(object sender, EventArgs e)
 		{
 			// load values
 			SiteDomain.Text = Settings.Default.SiteDomain;
 			SharedSecret.Text = Settings.Default.SharedSecret;
 		}
 
-		void MainForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+		void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			// save values			
 			Settings.Default.SiteDomain = SiteDomain.Text;
@@ -68,7 +68,7 @@ namespace iTunesUManager
 				// Convert from Tree coordinates to Screen coordinates
 				Point screenPoint = iTunesTree.PointToScreen(clickPoint);
 				// Convert from Screen coordinates to Form coordinates
-				Point formPoint = this.PointToClient(screenPoint);
+				Point formPoint = PointToClient(screenPoint);
 				// Show context menu
 				contextMenuStrip1.Items.Clear();
 

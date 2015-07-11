@@ -47,24 +47,24 @@ namespace edu.dts.iTunesULibrary
 
 		public static string ConvertTrackToMerge(string handle, Track track)
 		{
-			return @"<?xml version=""1.0"" encoding=""UTF-8""?>
+			return string.Format(@"<?xml version=""1.0"" encoding=""UTF-8""?>
 <ITunesUDocument>
 <Version>1.1.1</Version>
 <MergeTrack>
-<TrackHandle>" + handle + @"</TrackHandle>
+<TrackHandle>{0}</TrackHandle>
 <Track>
-	<Name>" + track.Name + @"</Name>
-	<Handle>" + track.Handle + @"</Handle>
-	<Kind>" + track.Handle + @"</Kind>
-	<DiscNumber>" + track.DiscNumber + @"</DiscNumber>
-	<TrackNumber>" + track.TrackNumber + @"</TrackNumber>
-	<DurationMilliseconds>" + track.DurationMilliseconds + @"</DurationMilliseconds>
-	<AlbumName>" + track.AlbumName + @"</AlbumName>
-	<ArtistName>" + track.ArtistName + @"</ArtistName>
-	<DownloadURL>" + track.DownloadURL + @"</DownloadURL>
+	<Name>{1}</Name>
+	<Handle>{2}</Handle>
+	<Kind>{2}</Kind>
+	<DiscNumber>{3}</DiscNumber>
+	<TrackNumber>{4}</TrackNumber>
+	<DurationMilliseconds>{5}</DurationMilliseconds>
+	<AlbumName>{6}</AlbumName>
+	<ArtistName>{7}</ArtistName>
+	<DownloadURL>{8}</DownloadURL>
 </Track>
 </MergeTrack>
-</ITunesUDocument>";
+</ITunesUDocument>", handle, track.Name, track.Handle, track.DiscNumber, track.TrackNumber, track.DurationMilliseconds, track.AlbumName, track.ArtistName, track.DownloadURL);
 		}
 
 		public static Track ParseTrackXml(XmlNode node)
